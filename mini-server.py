@@ -17,7 +17,7 @@ def index():
     load_dotenv()
     # connect to the PostgreSQL server
     logging.info('Connecting to the PostgreSQL database...')
-    conn = psycopg2.connect(host=os.getenv('POSTGRES_HOST_EXTERNAL'),
+    conn = psycopg2.connect(host='localhost',
                             database=os.getenv('POSTGRES_DB'),
                             user=os.getenv('POSTGRES_USER'),
                             password=os.getenv('POSTGRES_PASSWORD'))
